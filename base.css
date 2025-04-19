@@ -6,3 +6,13 @@
 html {
     scroll-behavior: smooth;
 }
+
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-wrap {
+    max-width: 1200px;
+}
