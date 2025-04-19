@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD Calculator</title>
+    <link rel="stylesheet" href="tools.css">
+    <link rel="icon" href="assets/your-money-tools-favicon.png">
+    <meta name="description" content="Money tools, a CD calculator change this later">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrap">
+            <div class="logo-wrap">
+                <img src="assets/your-money-tools-logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cd-calculator.html">CD Calculator</a></li>
+                <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="content-wrap">
+            <div class="header-wrap">
+                <h1>CD Calculator</h1>
+                <p>This CD Calculator helps you estimate the future value of 
+                    your Certificate of Deposit based on the initial deposit, 
+                    interest rate, and investment duration.</p>
+            </div>
+
+            <div class="content-feature-wrap">
+                <div class="left-wrap">
+                    <div class="section">
+                        <div class="label-wrap">
+                            <label for="initialAmount">Initial amount</label>
+                        </div>
+                        <input type="text" id="initialAmount" value="15000">
+                    </div>
+
+                    <div class="section">
+                        <div class="label-wrap">
+                            <label for="timeInput">Amount of time</label>
+                        </div>
+                        <div class="input-switch-wrapper">
+                            <div class="input-wrap">
+                                <button id="decreaseBtn">
+                                    <img src="assets/minus-icon.svg" alt="Icon">
+                                </button>
+                                <input type="text" id="timeInput" placeholder="Enter duration" value="4">
+                                <button id="increaseBtn">
+                                    <img src="assets/plus-icon.svg" alt="Icon">
+                                </button>
+                            </div>
+                            <div class="switch-buttons">
+                                <button id="monthsBtn" class="active time-buttons">Months</button>
+                                <button id="yearsBtn" class="time-buttons">Years</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="label-wrap">
+                            <label for="interest">Interest (annual %)</label>
+                        </div>
+                        <div class="input-with-symbol">
+                            <input type="text" id="interest" value="4.10">
+                            <span class="symbol">%</span>
+                        </div>
+                    </div>
+
+                    <div class="section-btn">
+                        <button id="calculateBtn" class="calculate-button">
+                            <span>Calculate</span>
+                            <img src="assets/arrow-right-white.svg" alt="Icon" class="button-arrow">
+                        </button>
+                    </div>
+
+
+                </div>
+
+                <div class="right-wrap">
+                    <div class="section">
+                        <div class="section">
+                            <p><strong>Compound Total:</strong> <span id="result"></span></p>
+                        </div>
+                        <canvas id="interestChart" width="400" height="200"></canvas>
+                        <div class="section">
+                            <h3>Monthly Breakdown</h3>
+                            <table id="interestTable" border="1" style="width: 100%; border-collapse: collapse;">
+                                <thead>
+                                    <tr>
+                                        <th>Period</th>
+                                        <th>Total Amount</th>
+                                        <th>Interest Earned</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- JS will inject rows here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+             
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="cd-calculator.js"></script>
+</body>
+</html>
