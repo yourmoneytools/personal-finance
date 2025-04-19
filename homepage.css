@@ -1,0 +1,91 @@
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.content-wrap {
+    /* padding: 0px 20px; */
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 40px;
+}
+
+.tool-block {
+    background-color: #f8ffff;
+    border: 1px solid #123132;
+    color: black;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 5px;
+    transition: box-shadow 0.3s ease;
+    width: 350px;
+}
+
+.tool-block:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tool-block a {
+    color: black;
+}
+
+.tools-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+section {
+    /* margin: 0px 20px; */
+}
+
+.section-wrap {
+    padding: 20px 0px;
+}
+
+.section-margin {
+    margin: 0px 20px;
+}
+
+h2 {
+    margin: 15px 0px;
+}
+
+p {
+    margin: 10px 0px;
+}
+
+/* hero */
+
+.hero-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-wrap h1 {
+    text-align: left;
+}
+
+.hero-wrap h1, .hero-wrap p, .hero-wrap button {
+    margin: 15px 0px;
+}
+
+.left-wrap {
+    width: 50%;
+}
+
+.left-wrap img {
+    width: 100%;
+}
+
+.right-wrap {
+    width: 50%;
+    padding: 20px;
+    background-color: #54afff;
+}

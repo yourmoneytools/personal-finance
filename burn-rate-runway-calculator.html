@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Runway Calculator</title>
+  <link rel="stylesheet" href="tools.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <meta name="description" content="Runway calculator - how long your savings will last.">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrap">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cd-calculator.html">CD Calculator</a></li>
+                <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+                <li><a href="burn-rate-calculator.html">Runway Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrap">
+        <label for="savings-amount">Current Savings</label>
+        <input type="text" id="savings-amount" value="10000">
+
+        <label for="monthly-expenses">Monthly Expenses</label>
+        <input type="text" id="monthly-expenses" value="2000">
+
+        <button id="button">Calculate</button>
+
+        <div class="result-wrap">
+            <p>Result</p>
+            <p>Your savings will last <span id="result"></span></p>
+        </div>
+
+        <div class="chart-wrap">
+            <canvas id="runwayChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="burn-rate-runway-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+let goalAmountInput = document.getElementById("goal-amount");
+let monthlyContributionInput = document.getElementById("monthly-contribution");
+let button = document.getElementById("button");
+let result = document.getElementById("result");
+let chart; // To store the chart instance
+
+const calculate = () => {
+    const goalAmount = parseFloat(goalAmountInput.value);
+    const monthlyContribution = parseFloat(monthlyContributionInput.value);
+
+    if (isNaN(goalAmount) || isNaN(monthlyContribution) || monthlyContribution <= 0) {
+        result.textContent = "Please enter valid numbers.";
+        return;
+    }
+
+    let currentTotal = 0;
+    let months = 0;
+    const labels = [];
+    const data = [];
+
+    while (currentTotal < goalAmount) {
+        currentTotal += monthlyContribution;
+        months++;
+        labels.push(`Month ${months}`);
+        data.push(currentTotal);
+    }
+
+    if (months <= 12) {
+        result.textContent = `${months} month${months === 1 ? "" : "s"}.`;
+    } else {
+        const years = Math.floor(months / 12);
+        const remainingMonths = months % 12;
+        result.textContent = `${years} year${years === 1 ? "" : "s"} and ${remainingMonths} month${remainingMonths === 1 ? "" : "s"}.`;
+    }
+
+    // Destroy previous chart if it exists
+    if (chart) {
+        chart.destroy();
+    }
+
+    const ctx = document.getElementById("savingsChart").getContext("2d");
+    chart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: "Savings Over Time",
+                data: data,
+                borderColor: "rgba(75, 192, 192, 1)",
+                backgroundColor: "rgba(75, 192, 192, 0.2)",
+                fill: true,
+                tension: 0.3
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+};
+
+calculate();
+button.addEventListener("click", calculate);

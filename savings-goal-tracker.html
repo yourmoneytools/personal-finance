@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CD Calculator</title>
+  <link rel="stylesheet" href="tools.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <meta name="description" content="Money tools, a cd calculator change this later">
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrap">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cd-calculator.html">CD Calculator</a></li>
+                <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrap">
+        <label for="goal-amount">Goal amount</label>
+        <input type="text" id="goal-amount" value="10000">
+
+        <label for="monthly-contribution">Monthly Contribution</label>
+        <input type="text" id="monthly-contribution" value="500">
+
+        <button id="button">Calculate</button>
+
+        <div class="result-wrap">
+            <p>Result</p>
+            <p>You will reach your goal in <span id="result"></span></p>
+        </div>
+
+        <div class="chart-wrap">
+            <canvas id="savingsChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="savings-goal-tracker.js"></script>
+
+</body>
+</html>

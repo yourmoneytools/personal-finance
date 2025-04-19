@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monthly Expense Calculator</title>
+  <link rel="stylesheet" href="tools.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <meta name="description" content="Break down your monthly expenses by category.">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrap">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cd-calculator.html">CD Calculator</a></li>
+                <li><a href="burn-rate-calculator.html">Runway Calculator</a></li>
+                <li><a href="monthly-expense-calculator.html">Expense Breakdown</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content-wrap">
+        <label for="expense-amount">Expense Amount</label>
+        <input type="number" id="expense-amount" placeholder="Enter amount" inputmode="decimal">
+
+
+        <label for="expense-category">Category</label>
+        <select id="expense-category">
+            <option value="" disabled selected>Select Category</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Gas">Gas</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Other">Other</option>
+            <option value="Phone and Internet">Phone & Internet</option>
+            <option value="Rent/Mortgage">Rent/Mortgage</option>
+            <option value="Restaurants">Restaurants</option>
+            <option value="Subscriptions">Subscriptions</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Utilities">Utilities</option>
+          </select>
+        
+
+        <button id="add-expense">Add Expense</button>
+
+        <div class="result-wrap">
+            <p id="total-expenses">Total Monthly Expenses: $0</p>
+        </div>
+
+        <div class="chart-wrap">
+            <canvas id="expensesChart" width="400" height="200"></canvas>
+
+        </div>
+
+        <div class="table-wrap">
+            <h3>Expense Breakdown</h3>
+            <table id="expense-table">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Percentage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Rows get injected here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="monthly-expense-calculator.js"></script>
+</body>
+</html>

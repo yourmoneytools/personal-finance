@@ -1,0 +1,36 @@
+<!-- blog.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Our Blog</title>
+        <style>
+            body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 1rem; }
+            h1, h2 { color: #333; }
+            .post-preview { margin-bottom: 2rem; }
+            .post-preview a { text-decoration: none; color: #0077cc; }
+            .post-preview a:hover { text-decoration: underline; }
+            hr { border: none; border-top: 1px solid #ccc; }
+        </style>
+    </head>
+    <body>
+        <h1>Our Blog</h1>
+        <div id="blog-posts"></div>
+
+        <script src="posts.js"></script>
+        <script>
+            const container = document.getElementById("blog-posts");
+            posts.forEach(post => {
+            const card = document.createElement("div");
+            card.className = "post-preview";
+            card.innerHTML = `
+                <h2><a href="post.html?slug=${post.slug}">${post.title}</a></h2>
+                <small>${new Date(post.date).toDateString()}</small>
+                <p>${post.excerpt}</p>
+                <hr/>
+            `;
+            container.appendChild(card);
+            });
+        </script>
+    </body>
+</html>
