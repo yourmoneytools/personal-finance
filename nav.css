@@ -33,13 +33,14 @@ nav ul, nav li {
 }
 
 .nav-list-wrap li a {
-    border-radius: 40px;
+    border-radius: 100px;
     transition: all 0.1s;
     padding: 10px 15px;
 }
 
 .main-nav li a:hover {
     background-color: #396380;
+    border-radius: 100px;
 }
 
 .main-nav li:hover .dropdown-menu {
@@ -64,6 +65,7 @@ nav ul, nav li {
     display: block;
     width: 100%;
     padding: 10px 15px;
+    border-radius: 100px;
 }
 
 
