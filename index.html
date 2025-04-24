@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head lang="en">
+    <head>
         <title>Your Money Tools</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Your Money Tools offers free, easy-to-use financial calculators to track expenses, plan savings, and improve your financial health. No sign-ups, just smart tools.">
-		<link rel="icon" href="assets/your-money-tools-favicon.png">
+		<link rel="icon" href="favicon.ico">
 
 		<script src="external-scripts.js"></script>
 		<link rel="stylesheet" href="tools.css">
 		<link rel="stylesheet" href="homepage.css">
 		<link rel="stylesheet" href="base.css">
+		<link rel="stylesheet" href="nav.css">
             
     </head>
     <body>
@@ -18,16 +19,49 @@
 		<div class="page-wrap">
 			<nav>
 				<div class="nav-wrap">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="cd-calculator.html">CD Calculator</a></li>
-						<li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
-						<li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
-						<li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
-						<li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
-						<li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
-						<li><a href="blogs.html">Blog</a></li>
-					</ul>
+					<div class="nav-image-wrap">
+						<a href="/">
+							<img src="" alt="Nav Logo Image">
+						</a>
+					</div>
+					<div class="nav-list-wrap">
+						<ul class="main-nav desktop-nav">
+							<li class="dropdown">
+								<a href="/tools.html">Tools</a>
+								<ul class="dropdown-menu">
+									<li><a href="cd-calculator.html">CD Calculator</a></li>
+									<li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+									<li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
+									<li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
+									<li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
+									<li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
+								</ul>
+							</li>
+							<li><a href="blogs.html">Blog</a></li>
+						</ul>
+						<div class="mobile-nav">
+							<div class="nav-controls">
+								<div class="nav-icon" id="hamburger-icon">
+									<img src="" alt="hamburger icon">
+								</div>
+							</div>
+							<li class="" id="mobile-nav">
+								<div class="nav-icon" id="close-icon">
+									<img src="" alt="close icon">
+								</div>
+								<a href="/tools.html">Tools</a>
+								<ul class="">
+									<li><a href="cd-calculator.html">CD Calculator</a></li>
+									<li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+									<li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
+									<li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
+									<li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
+									<li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
+									<li><a href="blogs.html">Blog</a></li>
+								</ul>
+							</li>
+						</div>
+					</div>
 				</div>
 			</nav>
 			<div class="content-wrap">
@@ -76,8 +110,9 @@
 								</div>
 							</div>
 						</a>
+					</div>
+					<div class="button-wrap">
 						<button><a href="tools.html">Explore All Tools</a></button>
-						
 					</div>
 				</section>
 				<section class="section-wrap section-margin">
@@ -171,5 +206,6 @@
             <a href="https://www.godaddy.com/domainsearch/find?domainToCheck=yourmoneytools.com&tmskey=sem_godaddy_brand">GoDaddy link</a>
         </section> -->
 
+		<script src="nav.js"></script>
     </body>
 </html>

@@ -12,154 +12,91 @@ body {
     background-color: rgb(254, 255, 255);
     margin: 0px;
     box-sizing: border-box;
-}
+  }
 
-h1 {
-color: #333;
-font-family: montserrat-bold;
-}
+  h1 {
+    color: #333;
+    text-align: center;
+    font-family: montserrat-bold;
+  }
 
-th, h3 {
-font-family: montserrat-bold;
-}
+  th, h3 {
+    font-family: montserrat-bold;
+  }
 
-p, label, input, button, td {
-font-family: montserrat-regular;
-}
+  p, label, input, button, td {
+    font-family: montserrat-regular;
+  }
 
-tbody {
-text-align: center;
-}
+  tbody {
+    text-align: center;
+  }
 
-td, th {
-padding: 3px;
-}
-
-nav {
-/* position: sticky;
-top: 5px; */
-width: 100%;
-z-index: 10;
-display: flex;
-justify-content: center;
-font-size: 15px;
-background-color: #0D3D48;
-}
-
-.nav-wrap {
-    max-width: 1024px;
-    width: 1024px;
-    padding: 10px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-/* border-radius: 40px; */
-}
-
-nav ul {
-display: flex;
-justify-content: space-around;
-padding: 0;
-list-style: none;
-margin: 0px;
-}
-
-nav ul li {
-}
-
-nav ul li a {
-color: white;
-text-decoration: none;
-padding: 10px 20px;
-display: block;
-}
-
-nav ul li a:hover {
-background-color: #0D3D48;
-border-radius: 6px;
-}
-
-.logo-wrap img {
-    width: 150px;
-}
-
-.content {
-width: 100%;
-display: flex;
-justify-content: center;
-}
-
-.content-feature-wrap {
-border-radius: 12px;
-display: flex;
-justify-content: space-between;
-}
-
-.content-wrap .section {
-margin-bottom: 15px;
-}
+  td, th {
+    padding: 3px;
+  }
 
 
-/* sections */
-.left-wrap {
-    width: 50%;
-    margin-right: 50px;
-    background: rgb(235, 244, 249);
+  .cd-calculator-wrap {
+    background: rgb(246 252 255);
     padding: 20px;
-    border-radius: 20px;
-    height: fit-content;
-}
+    border-radius: 12px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow */
+    border: 2px solid #156274;
+  }
 
-.right-wrap {
-    width: 50%;
-}
+  .cd-calculator-wrap .section {
+    margin-bottom: 15px;
+  }
 
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding and borders are included in width */
+    font-size: 15px;
+  }
 
-input[type="text"] {
-width: 100%;
-padding: 8px;
-border-radius: 6px;
-border: 1px solid #ccc;
-box-sizing: border-box; /* Ensure padding and borders are included in width */
-font-size: 15px;
-}
+  button {
+    border: none;
+    border-radius: 6px;
+    background-color: #0D3D48;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+  }
 
-button {
-border: none;
-border-radius: 6px;
-background-color: #0D3D48;
-color: white;
-cursor: pointer;
-font-size: 15px;
-}
+  button.active {
+    background-color: #0D3D48;
+  }
 
-button.active {
-background-color: #0D3D48;
-}
+  #result {
+    font-weight: bold;
+    font-size: 24px;
+    font-family: montserrat-bold;
+  }
 
-#result {
-font-weight: bold;
-font-size: 24px;
-font-family: montserrat-bold;
-}
+  canvas {
+    max-width: 100%;
+    margin-top: 20px;
+  }
 
-canvas {
-max-width: 100%;
-margin-top: 20px;
-}
+  .input-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
 
-.input-switch-wrapper {
-display: flex;
-align-items: center;
-gap: 10px;
-width: 100%;
-}
+  .content-wrap {
+      margin-top: 20px;
+  }
 
-.content-wrap {
-    /* margin-top: 20px; */
-}
-
-.input-with-symbol {
+  .input-with-symbol {
 position: relative;
 display: flex;
 align-items: center;
@@ -212,7 +149,7 @@ pointer-events: none; /* so it doesn't interfere with clicks */
 }
 
 .input-switch-wrapper button.active {
-  outline: 2px solid #24FFDE;
+  outline: 2px solid #63FFD3;
   outline-offset: 0px;
 }
 
@@ -275,24 +212,4 @@ pointer-events: none; /* so it doesn't interfere with clicks */
 .input-wrap button img {
   height: 10px;
   width: 10px;
-}
-
-
-
-@media (max-width: 1024px) {
-    .content-feature-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .left-wrap {
-        width: 97%;
-        margin-right: 0px;
-    }
-    
-    .right-wrap {
-        width: 100%;
-    }
 }
