@@ -2,6 +2,8 @@ nav {
     border: 1px solid red;
     background-color: #0D3D48;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul, nav li {
@@ -16,6 +18,7 @@ nav ul, nav li {
 
 .nav-wrap {
     max-width: 1200px;
+    width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
