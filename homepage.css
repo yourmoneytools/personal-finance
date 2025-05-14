@@ -7,8 +7,10 @@ a {
     color: white;
 }
 
-.content-wrap {
-    /* padding: 0px 20px; */
+.homepage-content-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 button {
@@ -17,28 +19,34 @@ button {
 }
 
 .tool-block {
-    background-color: #f8ffff;
-    border: 1px solid #123132;
+    background-color: #0d3d48;
+    border: 1px solid #0d3d48;
     color: black;
-    padding: 20px;
-    border-radius: 30px;
+    padding: 15px;
+    border-radius: 20px;
     margin: 5px;
     transition: box-shadow 0.3s ease;
-    width: 350px;
+    width: 250px;
+}
+
+.tool-block p, .tool-block h3 {
+    color: white;
 }
 
 .tool-block:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.tool-block a {
-    color: black;
-}
 
 .tools-wrap {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    color: white;
+}
+
+.tools-wrap a {
+    color: white;
 }
 
 section {
@@ -46,11 +54,13 @@ section {
 }
 
 .section-wrap {
-    /* padding: 20px 0px; */
+    padding: 20px 20px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .section-margin {
-    margin: 0px 20px;
+    /* margin: 0px 20px; */
 }
 
 h2 {
@@ -66,7 +76,8 @@ p {
 .hero-wrap {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 .hero-wrap h1 {
@@ -87,6 +98,36 @@ p {
 
 .right-wrap {
     width: 50%;
-    padding: 20px;
-    background-color: #54afff;
+    padding: 20px 50px 20px 20px;
+    background-color: #d0f4ff;
+}
+
+.right-wrap h3, .right-wrap p {
+    width: 90%;
+}
+
+.description-wrap h3 {
+    margin: 10px 0px;
+}
+
+.description-wrap p {
+    margin: 0px;
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px;
+}
+
+
+.tools-icons-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 550px) {
+    .tool-block {
+        width: 100%;
+    }
 }
