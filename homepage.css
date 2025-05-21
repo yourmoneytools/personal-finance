@@ -23,7 +23,7 @@ button {
     border: 1px solid #0d3d48;
     color: black;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 5px;
     transition: box-shadow 0.3s ease;
     width: 250px;
@@ -84,22 +84,38 @@ p {
     text-align: left;
 }
 
-.hero-wrap h1, .hero-wrap p, .hero-wrap button {
+.hero-wrap h1, .hero-wrap p {
     margin: 15px 0px;
+}
+
+.hero-wrap button {
+    margin: 15px 0px;
+    width: 250px;
 }
 
 .left-wrap {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left-wrap img {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    object-fit: cover;
 }
 
 .right-wrap {
     width: 50%;
     padding: 20px 50px 20px 20px;
     background-color: #d0f4ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .right-wrap h3, .right-wrap p {
@@ -117,7 +133,7 @@ p {
 .button-wrap {
     display: flex;
     justify-content: center;
-    margin: 15px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 
@@ -126,8 +142,43 @@ p {
     justify-content: space-between;
 }
 
+.tools-wrap .icon-block img {
+    width: 12px;
+}
+
+@media (max-width: 768px) {
+    .hero-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-wrap .left-wrap, .hero-wrap .right-wrap {
+        width: 100%;
+    }
+
+    .left-wrap img {
+        height: 350px;
+    }
+}
+
+
 @media (max-width: 550px) {
     .tool-block {
         width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .left-wrap img {
+        height: 100%;
+    }
+
+    .hero-wrap h1, .hero-wrap p {
+        margin: 10px 0px;
+    }
+    
+    .hero-wrap button {
+        margin: 10px 0px;
+        width: 250px;
     }
 }

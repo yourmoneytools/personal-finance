@@ -38,6 +38,8 @@ nav ul, nav li {
     border-radius: 40px;
     transition: all 0.1s;
     padding: 10px 15px;
+    color: white;
+    text-decoration: none;
 }
 
 .main-nav li a:hover {
@@ -68,6 +70,14 @@ nav ul, nav li {
     padding: 10px 15px;
 }
 
+.nav-icon {
+    display: flex;
+}
+
+.nav-icon img {
+    width: 20px;
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
     .mobile-nav {
@@ -82,13 +92,14 @@ nav ul, nav li {
     #mobile-nav {
         height: 100vh;
         width: 100%;
-        right: -100%;
+        right: 0%;
         top: 0px;
         position: absolute;
         background-color: #0D3D48;
         overflow: hidden;
         transition: all 0.3s;
         padding: 20px;
+        z-index: 40;
     }
 
     #mobile-nav.open {
