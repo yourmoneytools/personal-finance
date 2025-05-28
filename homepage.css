@@ -47,6 +47,7 @@ button {
 
 .tools-wrap a {
     color: white;
+    display: flex;
 }
 
 section {
@@ -140,6 +141,7 @@ p {
 .tools-icons-wrap {
     display: flex;
     justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .tools-wrap .icon-block img {
