@@ -1,1 +1,1 @@
-// you will add your tracking scripts here
+// add all your scripts for analytics and tracking here

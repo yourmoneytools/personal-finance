@@ -1,48 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Emergency Fund Calculator</title>
-  <link rel="stylesheet" href="tools.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico">
-  <meta name="description" content="Money tools, an emergency fund calculator">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Fund Calculator</title>
+<link rel="icon" href="assets/your-money-tools-favicon.png">
+<meta name="description" content="Money tools, an emergency fund calculator">
+
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="tools.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-wrap">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cd-calculator.html">CD Calculator</a></li>
-        <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
-        <li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav>
+  
+</nav>
 
+<div class="content">
   <div class="content-wrap">
-    <label for="monthly-expenses">Monthly Expenses</label>
-    <input type="text" id="monthly-expenses" value="2000">
-
-    <label for="months-to-cover">Months to Cover</label>
-    <input type="text" id="months-to-cover" value="6">
-
-    <label for="monthly-savings">How much you can save monthly</label>
-    <input type="text" id="monthly-savings" value="500">
-
-    <button id="button">Calculate</button>
-
-    <div class="result-wrap">
-      <p>Result</p>
-      <p>You need <strong><span id="goal"></span></strong> saved, and it will take <strong><span id="time"></span></strong>.</p>
+    <div class="header-wrap">
+      <h1>Emergency Fund Calculator</h1>
+      <p>Determine how much you need to save for your emergency fund and how long it will take to build it up.</p>
     </div>
 
-    <div class="chart-wrap">
-      <canvas id="emergencyChart" width="400" height="200"></canvas>
+    <div class="content-feature-wrap">
+      <div class="left-wrap">
+        <div class="section">
+          <div class="label-wrap">
+            <label for="monthly-expenses">Monthly Expenses</label>
+          </div>
+          <input type="text" id="monthly-expenses" value="2000">
+        </div>
+
+        <div class="section">
+          <div class="label-wrap">
+            <label for="months-to-cover">Months to Cover</label>
+          </div>
+          <input type="text" id="months-to-cover" value="6">
+        </div>
+
+        <div class="section">
+          <div class="label-wrap">
+            <label for="monthly-savings">Monthly Savings Amount</label>
+          </div>
+          <input type="text" id="monthly-savings" value="500">
+        </div>
+
+        <div class="section-btn">
+          <button id="button" class="calculate-button">
+            <span>Calculate</span>
+            <img src="assets/arrow-right-white.svg" alt="Icon" class="button-arrow">
+          </button>
+        </div>
+      </div>
+
+      <div class="right-wrap">
+        <div class="section result-wrap">
+          <p>You need to save: <strong><span id="goal"></span></strong></p>
+          <p>It will take: <strong><span id="time"></span></strong></p>
+        </div>
+        <canvas id="emergencyChart" width="400" height="200"></canvas>
+      </div>
     </div>
   </div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="emergency-fund-calculator.js"></script>
+<footer>
+  <div class="top-footer">
+    <ul>
+      <li><a href="cd-calculator.html">CD Calculator</a></li>
+      <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+      <li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
+      <li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
+      <li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
+      <li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="emergency-fund-calculator.js"></script>
+<script src="nav.js"></script>
 </body>
 </html>

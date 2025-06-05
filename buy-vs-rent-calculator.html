@@ -1,130 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Buy vs Rent Calculator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    .calculator-wrap {
-      max-width: 500px;
-      margin: auto;
-    }
-    button.active {
-      background-color: #007bff;
-      color: white;
-    }
-    input {
-      width: 100%;
-      padding: 5px;
-      margin-bottom: 10px;
-    }
-    canvas {
-      margin-top: 20px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy vs Rent Calculator – Make Smart Housing Decisions</title>
+<link rel="icon" href="assets/your-money-tools-favicon.png">
+<meta name="description" content="Compare the long-term costs of renting vs. buying a home. Enter your numbers to find out which option is better for your situation and save money on housing">
 
-    
-  </style>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="tools.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="cd-calculator.html">CD Calculator</a></li>
-            <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
-            <li><a href="index.html">Home</a></li>
-        </ul>
-    </nav>
-  <h1>Buy vs Rent Calculator</h1>
-  <div class="calculator-wrap">
-    <div>
-      <p>Home Price ($)</p>
-      <input type="number" id="homePrice" value="300000">
-    </div>
-    <div>
-      <p>Down Payment ($)</p>
-      <input type="number" id="downPayment" value="60000">
-    </div>
-    <div>
-      <p>Monthly Mortgage Payment ($)</p>
-      <input type="number" id="mortgage" value="1500">
-    </div>
-    <div>
-      <p>Monthly Rent ($)</p>
-      <input type="number" id="rent" value="1400">
-    </div>
-    <div>
-      <p>Years</p>
-      <input type="number" id="years" value="5">
-    </div>
-    <div>
-      <button id="calculateBtn">Calculate</button>
-    </div>
-    <div>
-      <p>Total cost of buying: <span id="buyCost"></span></p>
-      <p>Total cost of renting: <span id="rentCost"></span></p>
-    </div>
-    <div>
-      <canvas id="buyRentChart" width="400" height="200"></canvas>
+  <nav>
+    
+  </nav>
+
+  <div class="content">
+    <div class="content-wrap">
+      <div class="header-wrap">
+        <h1>Buy vs Rent Calculator</h1>
+        <p>Use this tool to compare the costs of buying vs renting a home and see which option might be better for your situation.</p>
+      </div>
+
+      <div class="content-feature-wrap">
+        <div class="left-wrap">
+          <div class="section">
+            <div class="label-wrap">
+              <label for="homePrice">Home Price ($)</label>
+            </div>
+            <input type="text" id="homePrice" value="300000">
+          </div>
+
+          <div class="section">
+            <div class="label-wrap">
+              <label for="downPayment">Down Payment (%)</label>
+            </div>
+            <input type="text" id="downPayment" value="20">
+          </div>
+
+          <div class="section">
+            <div class="label-wrap">
+              <label for="mortgageRate">Mortgage Rate (annual %)</label>
+            </div>
+            <div class="input-with-symbol">
+              <input type="text" id="mortgageRate" value="4.0">
+              <span class="symbol">%</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="label-wrap">
+              <label for="rentAmount">Monthly Rent ($)</label>
+            </div>
+            <input type="text" id="rentAmount" value="1500">
+          </div>
+
+          <div class="section">
+            <div class="label-wrap">
+              <label for="timeInput">Analysis Period</label>
+            </div>
+            <div class="input-switch-wrapper">
+              <div class="input-wrap">
+                <button id="decreaseBtn">
+                  <img src="assets/minus-icon.svg" alt="Icon">
+                </button>
+                <input type="text" id="timeInput" placeholder="Enter duration" value="5">
+                <button id="increaseBtn">
+                  <img src="assets/plus-icon.svg" alt="Icon">
+                </button>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="section-btn">
+            <button id="calculateBtn" class="calculate-button">
+              <span>Calculate</span>
+              <img src="assets/arrow-right-white.svg" alt="Icon" class="button-arrow">
+            </button>
+          </div>
+        </div>
+
+        <div class="right-wrap">
+          <div class="section result-wrap">
+            <p><strong>Buying Total Cost:</strong> <span id="buyTotal"></span></p>
+            <p><strong>Renting Total Cost:</strong> <span id="rentTotal"></span></p>
+          </div>
+          <canvas id="comparisonChart" width="400" height="200"></canvas>
+          <div class="section monthly-breakdown">
+            <h3>Annual Breakdown</h3>
+            <table id="comparisonTable" border="1" style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Buy Total</th>
+                  <th>Rent Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- JS will inject rows here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <footer>
+    <div class="top-footer">
+      <ul>
+        <li><a href="cd-calculator.html">CD Calculator</a></li>
+        <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+        <li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
+        <li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
+        <li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
+        <li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
+      </ul>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const calculateBtn = document.getElementById("calculateBtn");
-    const buyCostSpan = document.getElementById("buyCost");
-    const rentCostSpan = document.getElementById("rentCost");
-
-    let chart;
-
-    calculateBtn.addEventListener("click", () => {
-      const homePrice = parseFloat(document.getElementById("homePrice").value);
-      const downPayment = parseFloat(document.getElementById("downPayment").value);
-      const mortgage = parseFloat(document.getElementById("mortgage").value);
-      const rent = parseFloat(document.getElementById("rent").value);
-      const years = parseInt(document.getElementById("years").value);
-      const months = years * 12;
-
-      const totalBuy = (mortgage * months) + downPayment;
-      const totalRent = rent * months;
-
-      buyCostSpan.innerText = `$${totalBuy.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
-      rentCostSpan.innerText = `$${totalRent.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
-
-      if (chart) {
-        chart.data.datasets[0].data = [totalBuy];
-        chart.data.datasets[1].data = [totalRent];
-        chart.update();
-      } else {
-        const ctx = document.getElementById('buyRentChart').getContext('2d');
-        chart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['5-Year Cost'],
-            datasets: [
-              {
-                label: 'Buying',
-                data: [totalBuy],
-                backgroundColor: 'rgba(54, 162, 235, 0.6)'
-              },
-              {
-                label: 'Renting',
-                data: [totalRent],
-                backgroundColor: 'rgba(255, 99, 132, 0.6)'
-              }
-            ]
-          },
-          options: {
-            responsive: true,
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-      }
-    });
-  </script>
+  <script src="buy-vs-rent-calculator.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>

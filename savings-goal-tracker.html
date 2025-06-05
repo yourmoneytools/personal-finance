@@ -1,45 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>CD Calculator</title>
-  <link rel="stylesheet" href="tools.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico">
-  <meta name="description" content="Money tools, a cd calculator change this later">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savings Goal Tracker</title>
+<link rel="icon" href="assets/your-money-tools-favicon.png">
+<meta name="description" content="Savings Goal Tracker – Visualize and Reach Your Financial Goals
+Description: Track your progress toward your savings goals. Use this interactive tool to set goals, monitor progress, and stay motivated to save">
 
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="tools.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-wrap">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cd-calculator.html">CD Calculator</a></li>
-                <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="content-wrap">
-        <label for="goal-amount">Goal amount</label>
-        <input type="text" id="goal-amount" value="10000">
+<nav>
+  
+</nav>
 
-        <label for="monthly-contribution">Monthly Contribution</label>
-        <input type="text" id="monthly-contribution" value="500">
-
-        <button id="button">Calculate</button>
-
-        <div class="result-wrap">
-            <p>Result</p>
-            <p>You will reach your goal in <span id="result"></span></p>
-        </div>
-
-        <div class="chart-wrap">
-            <canvas id="savingsChart" width="400" height="200"></canvas>
-        </div>
+<div class="content">
+  <div class="content-wrap">
+    <div class="header-wrap">
+      <h1>Savings Goal Tracker</h1>
+      <p>This tool helps you track your savings progress and estimate how long it will take to reach your target.</p>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="savings-goal-tracker.js"></script>
+    <div class="content-feature-wrap">
+      <div class="left-wrap">
+        <div class="section">
+          <div class="label-wrap">
+            <label for="goalAmount">Savings Goal</label>
+          </div>
+          <input type="text" id="goalAmount" value="10000">
+        </div>
 
+        <div class="section">
+          <div class="label-wrap">
+            <label for="currentSavings">Current Savings</label>
+          </div>
+          <input type="text" id="currentSavings" value="2000">
+        </div>
+
+        <div class="section">
+          <div class="label-wrap">
+            <label for="monthlyContribution">Monthly Contribution</label>
+          </div>
+          <input type="text" id="monthlyContribution" value="300">
+        </div>
+
+        <div class="section">
+          <div class="label-wrap">
+            <label for="interestRate">Annual Interest Rate (%)</label>
+          </div>
+          <div class="input-with-symbol">
+            <input type="text" id="interestRate" value="3.0">
+            <span class="symbol">%</span>
+          </div>
+        </div>
+
+        <div class="section-btn">
+          <button id="calculateBtn" class="calculate-button">
+            <span>Calculate</span>
+            <img src="assets/arrow-right-white.svg" alt="Icon" class="button-arrow">
+          </button>
+        </div>
+      </div>
+
+      <div class="right-wrap">
+        <div class="section result-wrap">
+          <p><strong>Estimated Months to Goal:</strong> <span id="result"></span></p>
+        </div>
+        <canvas id="savingsChart" width="400" height="200"></canvas>
+        <div class="section monthly-breakdown">
+          <h3>Monthly Breakdown</h3>
+          <table id="progressTable" border="1" style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Total Savings</th>
+                <th>Interest Earned</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- JS will inject rows here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="top-footer">
+    <ul>
+      <li><a href="cd-calculator.html">CD Calculator</a></li>
+      <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+      <li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
+      <li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
+      <li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
+      <li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="savings-goal-tracker.js"></script>
+<script src="nav.js"></script>
 </body>
 </html>

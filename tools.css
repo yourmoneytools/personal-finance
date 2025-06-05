@@ -20,6 +20,16 @@ body {
     font-family: montserrat-bold;
   }
 
+  p {
+    margin: 10px 0px;
+    line-height: 22px;
+  }
+
+  li {
+    font-family: montserrat-regular;
+    margin: 10px 0px;
+  }
+
   th, h3 {
     font-family: montserrat-bold;
   }
@@ -59,6 +69,23 @@ body {
     border: 1px solid #ccc;
     box-sizing: border-box; /* Ensure padding and borders are included in width */
     font-size: 15px;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding and borders are included in width */
+    font-size: 15px;
+  }
+
+  select {
+    padding: 8px;
+    width: 100%;
+    border-radius: 6px;
+    font-family: montserrat-regular;
+    border: 1px solid #ccc;
   }
 
   button {
@@ -101,6 +128,7 @@ body {
 
   .content-wrap {
       max-width: 1200px;
+      width: 100%;
   }
 
 .header-wrap {
@@ -270,6 +298,65 @@ pointer-events: none; /* so it doesn't interfere with clicks */
   font-size: 30px;
 }
 
+
+.seo-wrap {
+  margin: 20px 0px;
+}
+
+
+#interestTable thead tr th:first-child {
+  border-top-left-radius: 20px;
+}
+
+#interestTable thead tr th:last-child {
+  border-top-right-radius: 20px;
+}
+
+#interestTable tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+
+#interestTable tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+
+thead {
+  background-color: #e1e5e5;
+}
+
+.download-section {
+  display: flex;
+  justify-content: end;
+}
+
+.download-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(243, 243, 243);
+  background-color: #f6fafa;
+  padding: 10px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.download-wrap:hover {
+  border: 1px solid rgb(196, 196, 196);
+}
+
+.download-wrap p {
+  font-size: 12px;
+  margin: 0px;
+  line-height: 15px;
+}
+
+.download-wrap img {
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+
+}
+
+
 @media (max-width: 880px) {
   .input-switch-wrapper {
     flex-direction: column;
@@ -284,6 +371,9 @@ pointer-events: none; /* so it doesn't interfere with clicks */
     margin: 0px;
   }
 
+  .right-wrap {
+    margin-top: 20px;
+  }
 
 }
 

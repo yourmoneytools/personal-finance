@@ -3,34 +3,63 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Our Blog</title>
-        <style>
-            body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 1rem; }
-            h1, h2 { color: #333; }
-            .post-preview { margin-bottom: 2rem; }
-            .post-preview a { text-decoration: none; color: #0077cc; }
-            .post-preview a:hover { text-decoration: underline; }
-            hr { border: none; border-top: 1px solid #ccc; }
-        </style>
+
+        <script src="external-scripts.js"></script>
+
+        <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="footer.css">
+		<link rel="stylesheet" href="tools.css">
+		<link rel="stylesheet" href="blogs.css">
     </head>
     <body>
-        <h1>Our Blog</h1>
-        <div id="blog-posts"></div>
 
-        <script src="posts.js"></script>
-        <script>
-            const container = document.getElementById("blog-posts");
-            posts.forEach(post => {
-            const card = document.createElement("div");
-            card.className = "post-preview";
-            card.innerHTML = `
-                <h2><a href="post.html?slug=${post.slug}">${post.title}</a></h2>
-                <small>${new Date(post.date).toDateString()}</small>
-                <p>${post.excerpt}</p>
-                <hr/>
-            `;
-            container.appendChild(card);
-            });
-        </script>
+        <div class="page-wrap">
+			<nav>
+				
+			</nav>
+			<div class="content">
+				<div class="content-wrap">
+					<h1>Our Blog</h1>
+            		<div id="blog-posts"></div>
+				</div>
+
+			</div>
+			<footer>
+				<div class="top-footer">
+				  <ul>
+					<li><a href="cd-calculator.html">CD Calculator</a></li>
+					<li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+					<li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
+					<li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
+					<li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
+					<li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
+				  </ul>
+				</div>
+		  
+			</footer>
+
+			<script src="nav.js"></script>
+            <script src="posts.js"></script>
+            <script>
+                const container = document.getElementById("blog-posts");
+                posts.forEach(post => {
+                const card = document.createElement("div");
+                card.className = "post-preview";
+                card.innerHTML = `
+                    <h2><a href="post.html?slug=${post.slug}">${post.title}</a></h2>
+                    <small>${new Date(post.date).toDateString()}</small>
+                    <p>${post.excerpt}</p>
+                    <hr/>
+                `;
+                container.appendChild(card);
+                });
+            </script>
+        </div>
+
+
     </body>
 </html>

@@ -4,16 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog Post</title>
-  <style>
-    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; }
-    h1 { font-size: 2rem; }
-    .date { color: gray; margin-bottom: 1rem; }
-  </style>
+  
+  <script src="external-scripts.js"></script>
+  <link rel="stylesheet" href="tools.css">
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="blogs.css">
 </head>
 <body>
-  <h1 id="post-title">Loading...</h1>
-  <div class="date" id="post-date"></div>
-  <div id="post-content"></div>
+	<div class="page-wrap">
+		<nav>
+			
+		</nav>
+		<div class="content">
+			<div class="content-wrap">
+				<div class="blog-wrap">
+					<div class="top-blog">
+						<h1 id="post-title">Loading...</h1>
+						<div class="date" id="post-date"></div>
+						<div class="tags" id="tags"></div>
+						<img src="" alt="" class="blog-img" id="blog-img">
+					</div>
+					<div class="bottom-blog">
+						<div id="post-content"></div>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+		<footer>
+			<div class="top-footer">
+			  <ul>
+				<li><a href="cd-calculator.html">CD Calculator</a></li>
+				<li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+				<li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
+				<li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
+				<li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
+				<li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
+			  </ul>
+			</div>
+	  
+		</footer>
+	</div>
+	
+  
 
   <script src="posts.js"></script>
   <script>
@@ -32,5 +69,6 @@
       document.getElementById("post-content").textContent = "The blog post you’re looking for doesn’t exist.";
     }
   </script>
+  <script src="nav.js"></script>
 </body>
 </html>

@@ -148,3 +148,22 @@ let tableBody = document.querySelector("#interestTable tbody");
 
 // 👇 Run once when the page loads
 calculateInterest();
+
+// pdf downloader
+document.getElementById("downloadPdfBtn").addEventListener("click", function () {
+    // Target the content you want to download
+    const content = document.querySelector(".results");
+  
+    // Options for the PDF (you can tweak this)
+    const options = {
+      margin:       0.5,
+      filename:     "cd-calculator-results.pdf",
+      image:        { type: "jpeg", quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: "in", format: "letter", orientation: "portrait" }
+    };
+  
+    // Generate and save the PDF
+    html2pdf().set(options).from(content).save();
+  });
+  

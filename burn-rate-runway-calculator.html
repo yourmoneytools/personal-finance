@@ -1,44 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Runway Calculator</title>
-  <link rel="stylesheet" href="tools.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico">
-  <meta name="description" content="Runway calculator - how long your savings will last.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burn Rate / Runway Calculator</title>
+<link rel="icon" href="assets/your-money-tools-favicon.png">
+<meta name="description" content="Burn rate calculator - calculate how long your savings will last.">
+
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="tools.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-wrap">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cd-calculator.html">CD Calculator</a></li>
-                <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
-                <li><a href="burn-rate-calculator.html">Runway Calculator</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="content-wrap">
-        <label for="savings-amount">Current Savings</label>
-        <input type="text" id="savings-amount" value="10000">
+<nav>
+  
+</nav>
 
-        <label for="monthly-expenses">Monthly Expenses</label>
-        <input type="text" id="monthly-expenses" value="2000">
-
-        <button id="button">Calculate</button>
-
-        <div class="result-wrap">
-            <p>Result</p>
-            <p>Your savings will last <span id="result"></span></p>
-        </div>
-
-        <div class="chart-wrap">
-            <canvas id="runwayChart" width="400" height="200"></canvas>
-        </div>
+<div class="content">
+  <div class="content-wrap">
+    <div class="header-wrap">
+      <h1>Burn Rate / Runway Calculator</h1>
+      <p>Find out how long your current savings will last based on your monthly expenses.</p>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="burn-rate-runway-calculator.js"></script>
+    <div class="content-feature-wrap">
+      <div class="left-wrap">
+        <div class="section">
+          <div class="label-wrap">
+            <label for="savings-amount">Current Savings</label>
+          </div>
+          <input type="text" id="savings-amount" value="10000">
+        </div>
+
+        <div class="section">
+          <div class="label-wrap">
+            <label for="monthly-expenses">Monthly Expenses</label>
+          </div>
+          <input type="text" id="monthly-expenses" value="2000">
+        </div>
+
+        <div class="section-btn">
+          <button id="button" class="calculate-button">
+            <span>Calculate</span>
+            <img src="assets/arrow-right-white.svg" alt="Icon" class="button-arrow">
+          </button>
+        </div>
+      </div>
+
+      <div class="right-wrap">
+        <div class="section result-wrap">
+          <p>Your savings will last: <strong><span id="result"></span></strong></p>
+        </div>
+        <canvas id="runwayChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="top-footer">
+    <ul>
+      <li><a href="cd-calculator.html">CD Calculator</a></li>
+      <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+      <li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
+      <li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
+      <li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
+      <li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="burn-rate-runway-calculator.js"></script>
+<script src="nav.js"></script>
 </body>
 </html>

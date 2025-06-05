@@ -1,32 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Monthly Expense Calculator</title>
-  <link rel="stylesheet" href="tools.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico">
-  <meta name="description" content="Break down your monthly expenses by category.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monthly Expense Calculator</title>
+<link rel="icon" href="assets/your-money-tools-favicon.png">
+<meta name="description" content="Break down your monthly expenses by category and see them in a chart and table.">
+
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="tools.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-wrap">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cd-calculator.html">CD Calculator</a></li>
-                <li><a href="burn-rate-calculator.html">Runway Calculator</a></li>
-                <li><a href="monthly-expense-calculator.html">Expense Breakdown</a></li>
-            </ul>
+<nav>
+  
+</nav>
+
+<div class="content">
+  <div class="content-wrap">
+    <div class="header-wrap">
+      <h1>Monthly Expense Calculator</h1>
+      <p>Break down your monthly expenses by category and see a chart and table summary.</p>
+    </div>
+
+    <div class="content-feature-wrap">
+      <div class="left-wrap">
+        <div class="section">
+          <div class="label-wrap">
+            <label for="expense-amount">Expense Amount</label>
+          </div>
+          <input type="number" id="expense-amount" placeholder="Enter amount" inputmode="decimal">
         </div>
-    </nav>
 
-    <div class="content-wrap">
-        <label for="expense-amount">Expense Amount</label>
-        <input type="number" id="expense-amount" placeholder="Enter amount" inputmode="decimal">
-
-
-        <label for="expense-category">Category</label>
-        <select id="expense-category">
+        <div class="section">
+          <div class="label-wrap">
+            <label for="expense-category">Category</label>
+          </div>
+          <select id="expense-category">
             <option value="" disabled selected>Select Category</option>
             <option value="Clothing">Clothing</option>
             <option value="Entertainment">Entertainment</option>
@@ -42,37 +53,60 @@
             <option value="Transportation">Transportation</option>
             <option value="Utilities">Utilities</option>
           </select>
-        
-
-        <button id="add-expense">Add Expense</button>
-
-        <div class="result-wrap">
-            <p id="total-expenses">Total Monthly Expenses: $0</p>
         </div>
 
-        <div class="chart-wrap">
-            <canvas id="expensesChart" width="400" height="200"></canvas>
+        <div class="section-btn">
+          <button id="add-expense" class="calculate-button">
+            <span>Add Expense</span>
+            <img src="assets/arrow-right-white.svg" alt="Icon" class="button-arrow">
+          </button>
+        </div>
 
+        <div class="section result-wrap">
+          <p id="total-expenses">Total Monthly Expenses: $0</p>
+        </div>
+      </div>
+
+      <div class="right-wrap">
+        <div class="chart-wrap">
+          <canvas id="expensesChart" width="400" height="200"></canvas>
         </div>
 
         <div class="table-wrap">
-            <h3>Expense Breakdown</h3>
-            <table id="expense-table">
-                <thead>
-                  <tr>
-                    <th>Category</th>
-                    <th>Amount</th>
-                    <th>Percentage</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- Rows get injected here -->
-                </tbody>
-            </table>
+          <h3>Expense Breakdown</h3>
+          <table id="expense-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Dynamic rows -->
+            </tbody>
+          </table>
         </div>
+      </div>
     </div>
+  </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="monthly-expense-calculator.js"></script>
+<footer>
+  <div class="top-footer">
+    <ul>
+      <li><a href="cd-calculator.html">CD Calculator</a></li>
+      <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+      <li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
+      <li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
+      <li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
+      <li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="monthly-expense-calculator.js"></script>
+<script src="nav.js"></script>
 </body>
 </html>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CD Calculator</title>
+    <title>CD Calculator – Estimate Your Certificate of Deposit’s Future Value</title>
     <link rel="icon" href="assets/your-money-tools-favicon.png">
-    <meta name="description" content="Money tools, a CD calculator change this later">
+    <meta name="description" content="Use this free CD calculator to see how your investment grows over time. Input your deposit amount, interest rate, and duration to get an accurate projection of your Certificate of Deposit earnings">
 
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="nav.css">
@@ -15,65 +15,23 @@
 </head>
 <body>
   <nav>
-    <div class="nav-wrap">
-      <div class="nav-image-wrap">
-        <a href="index.html">
-          <img src="" alt="Nav Logo Image">
-        </a>
-      </div>
-      <div class="nav-list-wrap">
-        <ul class="main-nav desktop-nav">
-          <li class="dropdown">
-            <a href="tools.html">Tools</a>
-            <ul class="dropdown-menu">
-              <li><a href="cd-calculator.html">CD Calculator</a></li>
-              <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
-              <li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
-              <li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
-              <li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
-              <li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
-            </ul>
-          </li>
-          <li><a href="blogs.html">Blog</a></li>
-        </ul>
-        <div class="mobile-nav">
-          <div class="nav-controls">
-            <div class="nav-icon" id="hamburger-icon">
-              <img src="" alt="hamburger icon">
-            </div>
-          </div>
-          <li class="" id="mobile-nav">
-            <div class="close-icon-wrap">
-              <div class="nav-icon" id="close-icon">
-                <img src="" alt="close icon">
-              </div>
-            </div>
-            <div class="mobile-menu-wrap">
-              <a class="header" href="/tools.html">Tools</a>
-              <ul class="">
-                <li><a href="cd-calculator.html">CD Calculator</a></li>
-                <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
-                <li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
-                <li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
-                <li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
-                <li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
-              </ul>
-              <a href="blogs.html">Blog</a>
-            </div>
-          </li>
-        </div>
-      </div>
-    </div>
+
   </nav>
 
     <div class="content">
         <div class="content-wrap">
             <div class="header-wrap">
-                <h1>CD Calculator</h1>
-                <p>This CD Calculator helps you estimate the future value of 
-                    your Certificate of Deposit based on the initial deposit, 
-                    interest rate, and investment duration.</p>
+              <h1>CD Calculator</h1>
+              <p>
+                  This CD Calculator helps you estimate the future value of your Certificate of Deposit 
+                  based on the initial deposit, interest rate, and investment duration. 
+                  With this tool, you can visualize how your savings will grow over time, 
+                  compare different interest rates, and make informed decisions 
+                  about your investment strategy. Enter your values below to see 
+                  how your money can work for you!
+              </p>
             </div>
+        
 
             <div class="content-feature-wrap">
                 <div class="left-wrap">
@@ -126,14 +84,25 @@
                 </div>
 
                 <div class="right-wrap">
-                    <div class="section">
+                  <div class="download-section">
+                    <div id="downloadPdfBtn" class="download-wrap">
+                
+                        <p>Download PDF</p>
+                        <img src="assets/download-icon.png" alt="Icon" class="button-arrow">
+                     
+                    </div>
+                  </div>
+                    <div class="section results">
                         <div class="section result-wrap">
                             <p><strong>Compound Total:</strong> <span id="result"></span></p>
                         </div>
                         <canvas id="interestChart" width="400" height="200"></canvas>
                         <div class="section monthly-breakdown">
                             <h3>Monthly Breakdown</h3>
-                            <table id="interestTable" border="1" style="width: 100%; border-collapse: collapse;">
+                            <table id="interestTable" border="1" style="width: 100%;
+                            border-spacing: 0;
+                            border-radius: 20px;
+                            overflow: hidden;">
                                 <thead>
                                     <tr>
                                         <th>Period</th>
@@ -152,6 +121,26 @@
              
                 
             </div>
+
+            <div class="seo-wrap">
+              <h2>Maximize Your Savings with Our CD Calculator</h2>
+              <p>Unlock the power of compound interest and smart investing with our easy-to-use Certificate of Deposit (CD) Calculator. Estimate your potential earnings, explore different interest rates, and visualize how your savings will grow over time. Perfect for beginners and seasoned savers alike, our CD calculator can help you plan your financial future with confidence. Start calculating and watch your money work for you!</p>
+              
+              <p>Our CD calculator allows you to see the impact of various terms and interest rates, so you can find the best option to suit your financial goals. With just a few simple inputs, you'll get a clear picture of how much your savings can grow, helping you make informed decisions for your future.</p>
+              
+              <p>Here’s how to get started:</p>
+              <ul>
+                <li>Enter the initial deposit amount to see how much you can save.</li>
+                <li>Select the term length to determine the time period for your investment.</li>
+                <li>Choose the interest rate to calculate your potential earnings.</li>
+                <li>Review the results to understand how your money can grow over time.</li>
+              </ul>
+            
+              <p>Whether you're planning for a big purchase, building an emergency fund, or simply want to make the most of your hard-earned money, our CD calculator is the perfect companion. No more guesswork—just reliable, data-driven insights to guide your savings strategy and put you on the path to financial freedom.</p>
+              
+              <p>Try our CD calculator today and take control of your financial journey. Save smarter, invest wisely, and watch your money grow!</p>
+            </div>
+            
         </div>
     </div>
     <footer>
@@ -169,6 +158,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
     <script src="cd-calculator.js"></script>
     <script src="nav.js"></script>
 </body>

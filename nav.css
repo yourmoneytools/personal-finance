@@ -21,13 +21,18 @@ nav ul, nav li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
     font-family: montserrat-regular;
 }
 
 .main-nav {
     display: flex;
     position: relative;
+}
+
+.nav-image-wrap img {
+    width: 125px;
+    display: flex;
 }
 
 .main-nav li {
@@ -58,6 +63,9 @@ nav ul, nav li {
     padding: 10px 10px;
     transform: translateX(-80%);
     width: 350px;
+    box-shadow: -2px 4px 43px -2px rgba(8,87,87,0.52);
+-webkit-box-shadow: -2px 4px 43px -2px rgba(8,87,87,0.52);
+-moz-box-shadow: -2px 4px 43px -2px rgba(8,87,87,0.52);
 }
 
 .dropdown-menu li {
@@ -92,7 +100,7 @@ nav ul, nav li {
     #mobile-nav {
         height: 100vh;
         width: 100%;
-        right: 0%;
+        right: 0;
         top: 0px;
         position: absolute;
         background-color: #0D3D48;
@@ -100,10 +108,6 @@ nav ul, nav li {
         transition: all 0.3s;
         padding: 20px;
         z-index: 40;
-    }
-
-    #mobile-nav.open {
-        right: 0;
     }
 
     .close-icon-wrap {
