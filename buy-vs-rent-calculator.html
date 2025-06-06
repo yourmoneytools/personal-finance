@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy vs Rent Calculator – Make Smart Housing Decisions</title>
+<link rel="icon" href="assets/your-money-tools-favicon.png">
+<meta name="description" content="Compare the long-term costs of renting vs. buying a home. Enter your numbers to find out which option is better for your situation and save money on housing">
+
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="tools.css">
+</head>
+<body>
+  <nav>
+    
+  </nav>
+
+  <div class="content">
+    <div class="content-wrap">
+      <div class="header-wrap">
+        <h1>Buy vs Rent Calculator</h1>
+        <p>Use this tool to compare the costs of buying vs renting a home and see which option might be better for your situation.</p>
+      </div>
+
+      <div class="content-feature-wrap">
+        <div class="left-wrap">
+          <div class="section">
+            <div class="label-wrap">
+              <label for="homePrice">Home Price ($)</label>
+            </div>
+            <input type="text" id="homePrice" value="300000">
+          </div>
+
+          <div class="section">
+            <div class="label-wrap">
+              <label for="downPayment">Down Payment (%)</label>
+            </div>
+            <input type="text" id="downPayment" value="20">
+          </div>
+
+          <div class="section">
+            <div class="label-wrap">
+              <label for="mortgageRate">Mortgage Rate (annual %)</label>
+            </div>
+            <div class="input-with-symbol">
+              <input type="text" id="mortgageRate" value="4.0">
+              <span class="symbol">%</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="label-wrap">
+              <label for="rentAmount">Monthly Rent ($)</label>
+            </div>
+            <input type="text" id="rentAmount" value="1500">
+          </div>
+
+          <div class="section">
+            <div class="label-wrap">
+              <label for="timeInput">Analysis Period</label>
+            </div>
+            <div class="input-switch-wrapper">
+              <div class="input-wrap">
+                <button id="decreaseBtn">
+                  <img src="assets/minus-icon.svg" alt="Icon">
+                </button>
+                <input type="text" id="timeInput" placeholder="Enter duration" value="5">
+                <button id="increaseBtn">
+                  <img src="assets/plus-icon.svg" alt="Icon">
+                </button>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="section-btn">
+            <button id="calculateBtn" class="calculate-button">
+              <span>Calculate</span>
+              <img src="assets/arrow-right-white.svg" alt="Icon" class="button-arrow">
+            </button>
+          </div>
+        </div>
+
+        <div class="right-wrap">
+          <div class="section result-wrap">
+            <p><strong>Buying Total Cost:</strong> <span id="buyTotal"></span></p>
+            <p><strong>Renting Total Cost:</strong> <span id="rentTotal"></span></p>
+          </div>
+          <canvas id="comparisonChart" width="400" height="200"></canvas>
+          <div class="section monthly-breakdown">
+            <h3>Annual Breakdown</h3>
+            <table id="comparisonTable" border="1" style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Buy Total</th>
+                  <th>Rent Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- JS will inject rows here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="top-footer">
+      <ul>
+        <li><a href="cd-calculator.html">CD Calculator</a></li>
+        <li><a href="buy-vs-rent-calculator.html">Buy VS Rent Calculator</a></li>
+        <li><a href="savings-goal-tracker.html">Savings Goal Tracker</a></li>
+        <li><a href="emergency-fund-calculator.html">Emergency Fund Calculator</a></li>
+        <li><a href="burn-rate-runway-calculator.html">Burn Rate Calculator</a></li>
+        <li><a href="monthly-expense-calculator.html">Monthly Expense Calculator</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="buy-vs-rent-calculator.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

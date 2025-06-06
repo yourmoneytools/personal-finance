@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private-folder/
+Allow: /public-folder/
+
+Sitemap: https://cashtools.org/sitemap.xml
