@@ -4,8 +4,7 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
-gtag('config', 'G-HGW5X87VBP')
+gtag('config', 'G-HGW5X87VBP');
 
 
 // Hotjar Tracking Code for https://www.cashtools.org/ 
