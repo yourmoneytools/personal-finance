@@ -9,6 +9,9 @@
 }
 
 .blog-list {
+  max-width: 1200px;
+  width: 100%;
+  min-width: 250px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -42,7 +45,7 @@
 }
 
 .blog-wrap {
-  max-width: 1300px;
+  max-width: 1200px;
   width: 100%;
 }
 
