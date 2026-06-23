@@ -102,6 +102,18 @@ a, span, ul, li, .date, .tag {
   width: 100%;
   display: flex;
   overflow: hidden;
+  border-radius: 40px;
+}
+
+.blog-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-img img {
+  border-radius: 40px;
+  width: 850px;
 }
 
 /* mobile responsiveness */
@@ -111,3 +123,5 @@ a, span, ul, li, .date, .tag {
   /* width: 30%; */
 }
 }
+
+
