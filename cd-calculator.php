@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD Calculator – Calculate CD Interest & Returns | Cash Tools</title>
+    <link rel="icon" href="assets/cash-tools-favicon.png" type="image/png">
+    <link rel="canonical" href="https://cashtools.org/cd-calculator.php">
+    <meta name="description" content="Use our free CD calculator to estimate CD interest, earnings, and final balance. Enter your deposit, interest rate, and term to calculate your potential returns">
+
+    <meta property="og:title" content="CD Calculator – Calculate CD Interest & Returns | Cash Tools" />
+    <meta property="og:description" content="Use our free CD calculator to estimate CD interest, earnings, and final balance. Enter your deposit, interest rate, and term to calculate your potential returns" />
+    <meta property="og:url" content="https://cashtools.org/cd-calculator.php" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="/base.css">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="/tools.css">
+ 
+</head>
+<body>
+
+    <!-- Google tag (gtag.js) -->
+    <!-- scripts -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGW5X87VBP"></script>
+    <script src="/external-scripts.js"></script>
+    <!-- end scripts -->
+
+    <?php include 'header.php'; ?>
+
+
+    <div class="content">
+        <div class="content-wrap">
+            <div class="header-wrap">
+              <h1>CD Calculator</h1>
+              <p>
+                  This CD Calculator helps you estimate the future value of your Certificate of Deposit 
+                  based on the initial deposit, interest rate, and investment duration. 
+                  With this tool, you can visualize how your savings will grow over time, 
+                  compare different interest rates, and make informed decisions 
+                  about your investment strategy. Enter your values below to see 
+                  how your money can work for you!
+              </p>
+            </div>
+        
+
+            <div class="content-feature-wrap">
+                <div class="left-wrap">
+                    <div class="section">
+                        <div class="label-wrap">
+                            <label for="initialAmount">Initial amount</label>
+                        </div>
+                        <input type="text" id="initialAmount" value="15000">
+                    </div>
+
+                    <div class="section">
+                        <div class="label-wrap">
+                            <label for="timeInput">Amount of time</label>
+                        </div>
+                        <div class="input-switch-wrapper">
+                            <div class="input-wrap">
+                                <button id="decreaseBtn">
+                                    <img src="assets/minus-icon.svg" alt="Icon">
+                                </button>
+                                <input type="text" id="timeInput" placeholder="Enter duration" value="4">
+                                <button id="increaseBtn">
+                                    <img src="assets/plus-icon.svg" alt="Icon">
+                                </button>
+                            </div>
+                            <div class="switch-buttons">
+                                <button id="monthsBtn" class="active time-buttons">Months</button>
+                                <button id="yearsBtn" class="time-buttons">Years</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="label-wrap">
+                            <label for="interest">Interest (annual %)</label>
+                        </div>
+                        <div class="input-with-symbol">
+                            <input type="text" id="interest" value="4.10">
+                            <span class="symbol">%</span>
+                        </div>
+                    </div>
+
+                    <div class="section-btn">
+                        <button id="calculateBtn" class="calculate-button">
+                            <span>Calculate</span>
+                            <img src="assets/arrow-right-white.svg" alt="Icon" class="button-arrow">
+                        </button>
+                    </div>
+
+
+                </div>
+
+                <div class="right-wrap">
+                  <div class="download-section">
+                    <div id="downloadPdfBtn" class="download-wrap">
+                
+                        <p>Download PDF</p>
+                        <img src="assets/download-icon.png" alt="Icon" class="button-arrow">
+                     
+                    </div>
+                  </div>
+                    <div class="section results">
+                        <div class="section result-wrap">
+                            <p><strong>Compound Total:</strong> <span id="result"></span></p>
+                        </div>
+                        <canvas id="interestChart" width="400" height="200"></canvas>
+                        <div class="section monthly-breakdown">
+                            <h3>Monthly Breakdown</h3>
+                            <table id="interestTable" border="1" style="width: 100%;
+                            border-spacing: 0;
+                            border-radius: 20px;
+                            overflow: hidden;">
+                                <thead>
+                                    <tr>
+                                        <th>Period</th>
+                                        <th>Total Amount</th>
+                                        <th>Interest Earned</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- JS will inject rows here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+             
+                
+            </div>
+
+            <div class="seo-wrap">
+              <h2>Maximize Your Savings with Our CD Calculator</h2>
+              <p>Unlock the power of compound interest and smart investing with our easy-to-use Certificate of Deposit (CD) Calculator. Estimate your potential earnings, explore different interest rates, and visualize how your savings will grow over time. Perfect for beginners and seasoned savers alike, our CD calculator can help you plan your financial future with confidence. Start calculating and watch your money work for you!</p>
+              
+              <p>Our CD calculator allows you to see the impact of various terms and interest rates, so you can find the best option to suit your financial goals. With just a few simple inputs, you'll get a clear picture of how much your savings can grow, helping you make informed decisions for your future.</p>
+              
+              <p>Here’s how to get started:</p>
+              <ul>
+                <li>Enter the initial deposit amount to see how much you can save.</li>
+                <li>Select the term length to determine the time period for your investment.</li>
+                <li>Choose the interest rate to calculate your potential earnings.</li>
+                <li>Review the results to understand how your money can grow over time.</li>
+              </ul>
+            
+              <p>Whether you're planning for a big purchase, building an emergency fund, or simply want to make the most of your hard-earned money, our CD calculator is the perfect companion. No more guesswork—just reliable, data-driven insights to guide your savings strategy and put you on the path to financial freedom.</p>
+              
+              <p>Try our CD calculator today and take control of your financial journey. Save smarter, invest wisely, and watch your money grow!</p>
+            </div>
+            
+        </div>
+    </div>
+    <?php include 'footer.php'; ?>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+    <script src="cd-calculator.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>
